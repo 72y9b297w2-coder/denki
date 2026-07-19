@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f4b400">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>電気 基礎クイズ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+<header><div><p class="eyebrow">BEGINNER ELECTRICITY</p><h1>電気 基礎クイズ</h1></div><button id="reset" class="link">記録削除</button></header>
+
+<section id="home" class="card">
+<label>章<select id="chapter"><option value="all">全章</option></select></label>
+<label>難易度<select id="level"><option value="all">すべて</option><option>入門</option><option>基礎</option><option>応用</option></select></label>
+<label>問題数<select id="count"><option value="10">10問</option><option value="20">20問</option><option value="50">50問</option><option value="100">100問</option><option value="1000">1000問コース</option></select></label>
+<button id="start" class="primary">はじめる</button>
+<button id="review" class="secondary">間違えた問題だけ復習</button>
+<div class="summary"><span>収録問題</span><strong id="total"></strong><small>計算問題は数値違いを多数収録</small></div>
+<p class="note">最初は「入門・10問」がおすすめです。計算問題は途中式を短く表示します。</p>
+</section>
+
+<section id="quiz" class="hidden">
+<div class="stats"><span id="prog"></span><span id="score"></span><span id="rate"></span></div>
+<div class="card question-card">
+<div class="meta"><span id="ch"></span><span id="lv"></span></div>
+<h2 id="q"></h2>
+<div id="choices" class="choices"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" class="primary hidden">次の問題</button>
+</div>
+<button id="quit" class="link quit">終了</button>
+</section>
+
+<section id="result" class="card hidden result">
+<p class="eyebrow">RESULT</p><h2>終了</h2><div id="resultText"></div>
+<button id="again" class="primary">同じ設定でもう一度</button>
+<button id="back" class="secondary">設定に戻る</button>
+</section>
+</main>
+<script src="questions.js"></script><script src="app.js"></script>
+</body></html>
